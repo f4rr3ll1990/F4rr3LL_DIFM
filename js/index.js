@@ -138,12 +138,14 @@
         }
         $('.selectpicker').selectpicker('refresh');
     };
+  
+    $(document).ready(function() {
 
         $('#selection').on('change', function() {
             change($(this).val(), $(this).find('option:selected').text());
         });
 
-
+    });
 
 
     function change(sourceUrl, name) {
