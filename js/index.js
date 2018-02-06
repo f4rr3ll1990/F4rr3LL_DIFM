@@ -156,13 +156,13 @@ function parse () {
     $('.selectpicker').selectpicker('refresh');
 };
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
-    // $('#selection').on('change', function() {
-    //     change($(this).val(), $(this).find('option:selected').text());
-    // });
+//     $('#selection').on('change', function() {
+//         change($(this).val(), $(this).find('option:selected').text());
+//     });
 
-});
+// });
 
 
 
