@@ -114,7 +114,7 @@
     // });
     var selectionid = document.getElementById("selection");
     selectionid.addEventListener('change', function (e) {
-      analyser._audio.src = this.val();
+      analyser._audio.src = selectionid.value;
     });
 
 
