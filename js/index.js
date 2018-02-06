@@ -116,6 +116,27 @@
     selectionid.addEventListener('change', function (e) {
       analyser._audio.src = selectionid.value;
     });
+    var playing = true;
+    var pause = document.getElementById("pause_btn");
+    var play = document.getElementById("play_btn");
+    pause.addEventListener('click', function (e) {
+      e.preventDefault(); e.stopPropagation();
+        pause.style.display = "none";
+        analyser._audio.pause();
+        play.style.display = "block";
+    });
+    play.addEventListener('click', function (e) {
+      e.preventDefault(); e.stopPropagation();
+      play.style.display = "none";
+      analyser._audio.play();
+      pause.style.display = "block";
+    });
+
+      var vol = document.getElementById("vol");
+      vol.addEventListener('change', function (e) {
+        e.preventDefault(); e.stopPropagation();
+        analyser._audio.volume = vol.value;
+      });
 
   }, false);
 }).call(this);
@@ -143,4 +164,5 @@ function parse () {
     }
     $('.selectpicker').selectpicker('refresh');
 };
+
 
