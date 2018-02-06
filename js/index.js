@@ -56,7 +56,7 @@
         'https://pub1.diforfree.org:8000/di_drumandbass_hi'
     }, document.body);
 
-    var analyser = new Analyser(null, 2048, 0.5).audio(audio);
+    var analyser = new Analyser(null, 204800, 0.5).audio(audio);
 
     var colors = [[
       [0/1, [0.2, 0.5, 1.0]],
@@ -106,7 +106,7 @@
       var file = e.dataTransfer.files[0];
       if(file) {
         URL.revokeObjectURL(analyser._audio.src);
-        analyser._audio.src = 'https://pub1.diforfree.org:8000/di_drumandbass_hi';
+        analyser._audio.src = URL.createObjectURL(file);
       }
     });
   }, false);
