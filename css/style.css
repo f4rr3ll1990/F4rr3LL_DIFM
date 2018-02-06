@@ -1,0 +1,16 @@
+html {
+  background: #000;
+  overflow: hidden;
+}
+
+audio {
+  position: absolute;
+  bottom: 1em; left: 50%;
+  width: 500px; margin: 0 -250px;
+}
+
+canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
