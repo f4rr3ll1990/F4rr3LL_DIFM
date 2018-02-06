@@ -124,6 +124,8 @@
 
 
 
+
+
   }, false);
 }).call(this);
 
@@ -148,13 +150,13 @@ function parse () {
         option.setAttribute("data-icon", "glyphicon-music");
         options.add(option);
     }
-    Jquery('.selectpicker').selectpicker('refresh');
+    $('.selectpicker').selectpicker('refresh');
 };
 
-Jquery(document).ready(function() {
+$(document).ready(function() {
 
-  Jquery('#selection').on('change', function() {
-        change(Jquery(this).val(), Jquery(this).find('option:selected').text());
+    $('#selection').on('change', function() {
+        change($(this).val(), $(this).find('option:selected').text());
     });
 
 });
@@ -171,4 +173,3 @@ function change(sourceUrl, name) {
         analyser._audio.src = sourceUrl;
     }
 }
-
