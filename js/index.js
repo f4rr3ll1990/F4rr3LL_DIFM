@@ -112,7 +112,10 @@
     // window.addEventListener('click', function (e) {
     //   analyser._audio.src = 'https://pub1.diforfree.org:8000/di_liquidtrap_hi';
     // });
-
+    var selectionid = document.getElementById("selection");
+    selectionid.addEventListener('change', function (e) {
+      analyser._audio.src = this.val();
+    });
 
 
 
@@ -155,9 +158,9 @@ function parse () {
 
 $(document).ready(function() {
 
-    $('#selection').on('change', function() {
-        change($(this).val(), $(this).find('option:selected').text());
-    });
+    // $('#selection').on('change', function() {
+    //     change($(this).val(), $(this).find('option:selected').text());
+    // });
 
 });
 
