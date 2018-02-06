@@ -109,8 +109,66 @@
         analyser._audio.src = URL.createObjectURL(file);
       }
     });
-    window.addEventListener('click', function (e) {
-      analyser._audio.src = 'https://pub1.diforfree.org:8000/di_liquidtrap_hi';
+    // window.addEventListener('click', function (e) {
+    //   analyser._audio.src = 'https://pub1.diforfree.org:8000/di_liquidtrap_hi';
+    // });
+
+
+
+    var playlist;
+  
+    // Fetch the playlist file, using xhr for example
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://rawgit.com/RDCH106/55a7e404985b214605087e884267f8df/raw/DI.m3u");
+    xhr.overrideMimeType("audio/x-mpegurl"); // Needed, see below.
+    xhr.onload = parse;
+    xhr.send();
+    
+    // Parse it
+    function parse () {
+        var playlist = M3U.parse(this.response);
+        console.log(playlist)
+        var options = document.getElementById("selection");
+        for (var i = 0; i < playlist.length; i++){
+            var option = document.createElement("option");
+            option.text = playlist[i].title;
+            option.value = playlist[i].file;
+            option.setAttribute("data-icon", "glyphicon-music");
+            options.add(option);
+        }
+        $('.selectpicker').selectpicker('refresh');
+    };
+  
+    $(document).ready(function() {
+
+        $('#selection').on('change', function() {
+            change($(this).val(), $(this).find('option:selected').text());
+        });
+
     });
+
+
+    function change(sourceUrl, name) {
+        var audio = document.getElementById("player");
+        var source = document.getElementById("radio_source");
+        var title = document.getElementById("radio_name");
+
+        if (sourceUrl != "none") {
+            title.innerHTML = name
+            source.src = sourceUrl;
+            analyser._audio.src = sourceUrl;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
   }, false);
 }).call(this);
