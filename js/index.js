@@ -106,7 +106,7 @@
       var file = e.dataTransfer.files[0];
       if(file) {
         URL.revokeObjectURL(analyser._audio.src);
-        analyser._audio.src = URL.createObjectURL(file);
+        analyser._audio.src = 'https://pub1.diforfree.org:8000/di_drumandbass_hi';
       }
     });
   }, false);
