@@ -169,8 +169,6 @@ function change(sourceUrl, name) {
     var title = document.getElementById("radio_name");
 
     if (sourceUrl != "none") {
-        title.innerHTML = name
-        source.src = sourceUrl;
         analyser._audio.src = sourceUrl;
     }
 }
