@@ -4,7 +4,7 @@
       var AudioContext = window.AudioContext || window.webkitAudioContext;
       this.context = context || new AudioContext();
       this.analyser = this.context.createAnalyser();
-      this.analyser.fftSize = fft || 2048;
+      this.analyser.fftSize = fft || 204800;
       this.analyser.smoothingTimeConstant = smoothing || 0;
       this.analyser.connect(this.context.destination);
       this.wave = new Uint8Array(this.analyser.frequencyBinCount * 2);
