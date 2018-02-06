@@ -4,7 +4,7 @@
       var AudioContext = window.AudioContext || window.webkitAudioContext;
       this.context = context || new AudioContext();
       this.analyser = this.context.createAnalyser();
-      this.analyser.fftSize = fft || 204800;
+      this.analyser.fftSize = fft || 2048;
       this.analyser.smoothingTimeConstant = smoothing || 0;
       this.analyser.connect(this.context.destination);
       this.wave = new Uint8Array(this.analyser.frequencyBinCount * 2);
@@ -56,7 +56,7 @@
         'https://pub1.diforfree.org:8000/di_drumandbass_hi'
     }, document.body);
 
-    var analyser = new Analyser(null, 204800, 0.5).audio(audio);
+    var analyser = new Analyser(null, 2048, 0.5).audio(audio);
 
     var colors = [[
       [0/1, [0.2, 0.5, 1.0]],
