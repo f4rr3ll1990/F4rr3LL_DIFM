@@ -117,12 +117,6 @@
       analyser._audio.src = selectionid.value;
     });
 
-
-
-
-
-
-
   }, false);
 }).call(this);
 
@@ -150,22 +144,3 @@ function parse () {
     $('.selectpicker').selectpicker('refresh');
 };
 
-// $(document).ready(function() {
-
-//     $('#selection').on('change', function() {
-//         change($(this).val(), $(this).find('option:selected').text());
-//     });
-
-// });
-
-
-
-function change(sourceUrl, name) {
-    var audio = document.getElementById("player");
-    var source = document.getElementById("radio_source");
-    var title = document.getElementById("radio_name");
-
-    if (sourceUrl != "none") {
-        analyser._audio.src = sourceUrl;
-    }
-}
