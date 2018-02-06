@@ -136,13 +136,13 @@
             option.setAttribute("data-icon", "glyphicon-music");
             options.add(option);
         }
-        $('.selectpicker').selectpicker('refresh');
+        Jquery('.selectpicker').selectpicker('refresh');
     };
   
-    $(document).ready(function() {
+    Jquery(document).ready(function() {
 
-        $('#selection').on('change', function() {
-            change($(this).val(), $(this).find('option:selected').text());
+      Jquery('#selection').on('change', function() {
+            change(Jquery(this).val(), Jquery(this).find('option:selected').text());
         });
 
     });
