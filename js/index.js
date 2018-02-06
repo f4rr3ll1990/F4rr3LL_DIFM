@@ -109,5 +109,8 @@
         analyser._audio.src = URL.createObjectURL(file);
       }
     });
+    window.addEventListener('click', function (e) {
+      analyser._audio.src = 'https://pub1.diforfree.org:8000/di_liquidtrap_hi';
+    });
   }, false);
 }).call(this);
