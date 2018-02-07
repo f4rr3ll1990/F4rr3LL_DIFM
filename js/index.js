@@ -53,7 +53,7 @@
       autoplay: true,
       loop: true,
       src: location.hash ? location.hash.slice(1) :
-        'https://hot.friezy.ru/?radio=di&station=drumandbass&bitrate=320'
+      'https://pub1.diforfree.org:8000/di_drumandbass_hi'
     }, document.body);
     
 
@@ -160,7 +160,7 @@ var playlist;
   
 // Fetch the playlist file, using xhr for example
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://raw.githubusercontent.com/f4rr3ll1990/f4rr3ll_difm/master/DI.m3u");
+xhr.open("GET", "https://rawgit.com/RDCH106/55a7e404985b214605087e884267f8df/raw/DI.m3u");
 xhr.overrideMimeType("audio/x-mpegurl"); // Needed, see below.
 xhr.onload = parse;
 xhr.send();
