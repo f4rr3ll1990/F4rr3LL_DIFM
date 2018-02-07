@@ -123,20 +123,34 @@
       e.preventDefault(); e.stopPropagation();
         pause.style.display = "none";
         analyser._audio.pause();
+        playing = false;
         play.style.display = "block";
     });
     play.addEventListener('click', function (e) {
       e.preventDefault(); e.stopPropagation();
       play.style.display = "none";
       analyser._audio.play();
+      playing = true;
       pause.style.display = "block";
     });
 
-      var vol = document.getElementById("vol");
-      vol.addEventListener('input', function (e) {
-        e.preventDefault(); e.stopPropagation();
-        analyser._audio.volume = vol.value;
-      });
+    var vol = document.getElementById("vol");
+    vol.addEventListener('input', function (e) {
+      e.preventDefault(); e.stopPropagation();
+      analyser._audio.volume = vol.value;
+    });
+
+    document.body.onkeydown = function(e){
+      if(e.keyCode == 32){
+          if(playing) {
+            analyser._audio.pause();
+            playing = false;
+          } else {
+            analyser._audio.play();
+            playing = true;
+          }
+      }
+    }
 
   }, false);
 }).call(this);
