@@ -157,7 +157,7 @@
 }).call(this);
 
 var playlist;
-  
+
 // Fetch the playlist file, using xhr for example
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "https://rawgit.com/RDCH106/55a7e404985b214605087e884267f8df/raw/DI.m3u");
