@@ -133,7 +133,7 @@
     });
 
       var vol = document.getElementById("vol");
-      vol.addEventListener('change', function (e) {
+      vol.addEventListener('input', function (e) {
         e.preventDefault(); e.stopPropagation();
         analyser._audio.volume = vol.value;
       });
