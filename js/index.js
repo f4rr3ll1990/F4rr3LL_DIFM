@@ -53,7 +53,7 @@
       autoplay: true,
       loop: true,
       src: location.hash ? location.hash.slice(1) :
-        'https://pub1.diforfree.org:8000/di_drumandbass_hi'
+        'https://hot.friezy.ru/?radio=di&station=drumandbass&bitrate=320'
     }, document.body);
 
     var analyser = new Analyser(null, 2048, 0.5).audio(audio);
