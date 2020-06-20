@@ -1,6 +1,4 @@
 #EXTM3U
-#EXTINF:-1,RadioC2
-#http://donleone.online:8448
 #EXTINF:-1,20th Century - CLASSICALRADIO
 http://donleone.online:8448/20th_century?909f6af26b227b4530bfcd07
 #EXTINF:-1,21st Century - CLASSICALRADIO
